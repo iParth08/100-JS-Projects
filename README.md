@@ -7,8 +7,8 @@ Learn well.
 
 1. Background-Changer
 
-    >> Change Background on a click
+    > Change Background on a click
     
 2. Prompt a Message
   
-    >> Take an Input and Display
+    > Take an Input and Display
