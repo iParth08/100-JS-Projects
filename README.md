@@ -1,5 +1,6 @@
 # 100-JS-Projects
 A collection of JavaScript Projects from Basic to ADVANCE level.  
+**Language Used : HTML5, CSS3, javaScript**  
 Learn well.  
 > Practice is path of Progress :)
 
