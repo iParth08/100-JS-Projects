@@ -4,7 +4,9 @@ A collection of JavaScript Projects from Basic to ADVANCE level.
 Learn well.  
 > Practice is path of Progress :)
 
-## Basic Projects :: Level 01
+## Basic Projects   
+
+### :: Level 01
 
 1. Background-Changer
 
