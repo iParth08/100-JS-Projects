@@ -22,9 +22,9 @@
  ## Version Updates
  
  1. **Version 1.0** 
-  - **v1.0 :** From an Array of defined colors, select a random color and set to background when *button* is clicked
- 3. **Version 2.0**
-  - *Comming Soon*
+    - **v1.0 :** From an Array of defined colors, select a random color and set to background when *button* is clicked
+ 2. **Version 2.0**
+    - *Comming Soon*
 
 
 ## Signature

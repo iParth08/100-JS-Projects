@@ -15,3 +15,7 @@ Learn well.
 2. Prompt a Message
   
     > Take an Input and Display
+    
+3. Stopwatch Counter
+    
+    > Score counter and Stopwatch
