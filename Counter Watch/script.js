@@ -7,41 +7,35 @@ const sec = document.getElementById("sec");
 const min = document.getElementById("min");
 
 let mili_val = 0, sec_val = 0, min_val = 0;
-let stop_mili, stop_sec, stop_min;
+let stop_count;
 
 function startCounter(){
 
-    stop_mili = setInterval(function(){
+    stop_count = setInterval(function (){
         mili_val += 1;
-        if(mili_val == 1000){
+        if(mili_val == 100){
             mili_val = 0;
+            sec_val += 1;
+
+            if(sec_val == 60){
+                sec_val = 0;
+                min_val += 1;
+
+                    if(min_val == 90){
+                        stopCounter();
+                    }
+            }
         }
         mili.innerText = mili_val;
-        
-    },1);
-
-     stop_sec = setInterval(function(){
-        sec_val += 1;
-        if(sec_val == 60){
-            sec_val = 0;
-        }
         sec.innerText = sec_val;
-        
-    }, 1000);
-
-     stop_min = setInterval(function(){
-        min_val += 1;
-        if(min_val == 1000){
-            min_val = 0;
-        }
         min.innerText = min_val;
-    }, 60000);
+    }, 10);
+    
 }
 
 function stopCounter(){
-    clearInterval(stop_mili);
-    clearInterval(stop_sec);
-    clearInterval(stop_min);
+    clearInterval(stop_count);
+
 }
 
 toggle.addEventListener('click', function(){
@@ -62,7 +56,7 @@ reset.addEventListener('click', function(){
     mili.innerText = "00";
     sec.innerText = "00";
     min.innerText = "00";
-    toggle.value = "Start";
+    toggle.innerText = "Start";
 })
 
 // Counter elements fetch
