@@ -1,0 +1,103 @@
+*{
+    margin:0;
+    padding:0;
+    outline:0;
+    border:0;
+}
+
+#wrapper{
+    height:100vh;
+    width:100%;
+
+    background-image: url('freepik.jpg') ;
+    background-size: cover;
+    color:white;
+
+    display: grid;
+    place-content: center;
+}
+
+#report-card{
+    height:3auto;
+    width: 600px;
+    background-color: rgba(0,0,0, 0.92);
+    border-radius: 30px;
+    box-sizing: border-box;
+    box-shadow: -4px -4px 17px  #fff;
+
+    padding: 20px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+}
+
+#heading{
+    height: auto;
+    width: 100px ;
+    line-height: 50px;
+    padding-left: 20px;
+    border-left: 3px solid lightgoldenrodyellow;
+   
+}
+
+#number{
+    margin: 10px 0;
+    background-color: transparent;
+}
+
+#report-card #number input{
+    height: 35px;
+    width: 250px;
+    background-color: transparent;
+    color: white;
+    font-size: 19px;
+    font-weight: bolder;
+
+    display:block;
+    padding: 0px 5px;
+    margin-bottom: 10px;
+
+    border-bottom: 2px solid whitesmoke;
+}
+
+#report-card #number input:focus{
+    border-bottom: 2px solid rgb(102, 213, 55);
+}
+
+:-ms-input-placeholder{
+    color: white;
+    opacity: 0.8;
+    font-size: 14px;
+}
+::-webkit-input-placeholder{
+    color:white;
+    opacity: 0.8;
+    font-size: 14px;
+}
+
+
+#report-card button{
+    height: auto;
+    width: auto;
+    background-color: transparent;
+    color: skyblue;
+
+    font-weight: 900;
+}
+
+#result{
+    color: aliceblue;
+    background-color: transparent;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    margin:20px auto;
+
+    font-weight: 900;
+
+}
+
+.hide{
+   display: none;
+}
