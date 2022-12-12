@@ -23,7 +23,9 @@ Learn well.
 5. Form Validation
 6. Quotes Generator
 7. Caption your Image
+
+
 ### Game Zone  :: Level 01
 
-5. Guess the Number
+1. Guess the Number
     > Guess random generated integer in minimum chances
