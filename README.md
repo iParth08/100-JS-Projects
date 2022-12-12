@@ -20,6 +20,9 @@ Learn well.
 4. Student Grade Calculator
     > Input marks, get grades and remarks
 
+5. Form Validation
+6. Quotes Generator
+7. Caption your Image
 ### Game Zone  :: Level 01
 
 5. Guess the Number
