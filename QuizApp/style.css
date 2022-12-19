@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	border: 0px;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+
+	display: grid;
+	place-content: center;
+}
+
+.wrapper {
+	height: auto;
+	width: 50vw;
+	border: 2px solid black;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.asgard {
+	height: auto;
+	width: 100%;
+	text-align: center;
+	padding-top: 1.3em;
+	line-height: 40px;
+
+	background-color: rgb(214, 175, 246);
+}
+
+.asgard h1 {
+	font-size: 3em;
+	color: rgb(50, 49, 49);
+	text-shadow: 2px 2px 0px white;
+	font-family: "Patrick Hand", cursive;
+}
+.asgard p {
+	color: rgb(29, 28, 28);
+	letter-spacing: 3px;
+}
+
+.asgard .bar {
+	height: 0.5em;
+	width: auto;
+	background: rgb(244, 215, 255);
+	margin-top: 1em;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+
+	display: flex;
+	justify-content: left;
+}
+
+.asgard .bar .state {
+	height: 100%;
+	width: calc(50vw / 14);
+}
+
+.midgard {
+	height: auto;
+	width: 100%;
+	text-align: center;
+
+	background-color: rgb(242, 233, 253);
+
+	padding-bottom: 40px;
+}
+
+.midgard #count {
+	padding: 10px;
+	background-color: rgb(205, 147, 246);
+	font-family: "Courier New", Courier, monospace;
+}
+.midgard #question {
+	min-height: 4em;
+	width: inherit;
+
+	padding: 15px 20px;
+	background-color: rgb(171, 124, 224);
+	box-shadow: 0 0 5px #5c1e7f;
+	color: #fff;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	margin-bottom: 40px;
+
+	font-size: 1.3em;
+	text-align: justify;
+}
+
+.midgard .options {
+	height: 40px;
+	width: 45%;
+
+	display: flex;
+	justify-content: left;
+	align-items: center;
+
+	background: rgb(247, 240, 240);
+
+	margin: 10px 2.5%;
+	padding-right: 10px;
+
+	font-size: 1.3em;
+	text-align: left;
+	float: left;
+
+	transition: all 0.5s;
+}
+
+.midgard .options span {
+	height: 40px;
+	width: 60px;
+	border-right: 5px solid rgb(178, 54, 180);
+	background-color: rgb(157, 119, 201);
+	color: white;
+	display: block;
+
+	font-weight: 700;
+	text-align: center;
+	line-height: 40px;
+	/* margin-right: 15px; */
+}
+
+.midgard .options .option {
+	width: 100%;
+	padding: 8px 0px;
+	padding-left: 15px;
+	/* border-right: 15px solid red; */
+	background-color: white;
+	cursor: pointer;
+
+	transition: all 0.5s;
+}
+
+.midgard .options:hover {
+	transform: scale(1.1);
+	background-color: rgb(171, 124, 224);
+}
+
+.hell {
+	height: 3em;
+	width: 100%;
+	background-color: rgb(210, 172, 255);
+	font-size: 15px;
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.midgard .options .correct {
+	color: #fff;
+	animation: correctBg 1000ms infinite;
+}
+.midgard .options .incorrect {
+	animation: incorrectBg 400ms infinite;
+	color: #fff;
+}
+
+@keyframes correctBg {
+	0% {
+		background-color: rgba(255, 255, 255, 0.5);
+	}
+	100% {
+		background: rgb(59, 190, 49);
+	}
+}
+
+@keyframes incorrectBg {
+	0% {
+		background-color: rgba(255, 255, 255, 0.5);
+	}
+	100% {
+		background: rgb(243, 106, 106);
+	}
+}
+
+.plus {
+	background: rgb(59, 190, 49);
+}
+.minus {
+	background: rgb(243, 106, 106);
+}
+
+.scored {
+	text-shadow: 2px 2px 6px rgb(255, 255, 255);
+}
+
+/* //WARN:: Do not disturb media query */
+@media screen and (max-width: 700px) {
+	.wrapper {
+		width: 90vw;
+	}
+	.asgard .bar .state {
+		height: 100%;
+		width: calc(90vw / 14);
+	}
+}

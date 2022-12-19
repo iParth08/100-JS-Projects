@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Quiz</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="asgard">
+            <h1>Marvel Quest</h1>
+            <p>Are you a worthy Marvel fan?</p>
+            <div class="bar">
+                <!-- poppulated by app.js -->
+                <!-- <div class="state correct"></div>
+                <div class="state incorrect"></div> -->
+            </div>
+        </div>
+
+        <div class="midgard">
+            <h2 id="count">Qno 1</h2>
+            <h3 id="question">
+                Who is true father of Spiderman? 
+            </h3>
+
+            <div onclick="checkCorrect(event)">
+                <div class="options"><span>1.</span><div id="opt1" class="option"></div></div>
+                <div class="options"><span>2.</span><div id="opt2" class="option"></div></div>
+                <div class="options"><span>3.</span><div id="opt3" class="option"></div></div>
+                <div class="options"><span>4.</span><div id="opt4" class="option"></div></div>
+            </div>
+
+        </div>
+
+        <div class="hell">
+            <span class="developer">Developed with ❤️ by <a href="https://github.com/iParth08">Shwet Prakash</a></div>
+        </div>
+    </div>
+
+    <script src="quesBank.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
