@@ -42,7 +42,8 @@ function populate(char) {
 	let box = document.createElement("div");
 	box.classList.add("box");
 	box.setAttribute("id", "box_${i}");
-	box.innerText = country[alpha][0];
+	box.innerHTML = `<h2>${char}</h2>` + country[alpha][0];
+	box.style.border = `4px solid ${colors[alpha]}`;
 
 	output.appendChild(box);
 }
@@ -52,10 +53,17 @@ function fetchDetail(string) {
 	output.classList.add("outShow");
 	output.classList.add("center");
 
+	let count = 0;
+
 	let strArr = Array.from(string);
-	strArr.forEach((char) => {
-		populate(char);
-	});
+	let done = setInterval(() => {
+		if (count == strArr.length) clearInterval(done);
+
+		if (strArr[count] != " ") {
+			populate(strArr[count]);
+		}
+		count += 1;
+	}, 700);
 }
 
 inCon.addEventListener("keyup", (event) => {
@@ -63,8 +71,39 @@ inCon.addEventListener("keyup", (event) => {
 		inCon.classList.remove("center");
 		inCon.classList.add("Animatetop");
 		inCon.readOnly = true;
-
 		let string = inCon.value;
+		inCon.style.textShadow = "2px 2px 1px #333333, 4px 4px 3px #3366E6";
+
 		fetchDetail(string.toUpperCase());
 	}
 });
+
+// just a trick to give various bgcolors
+const colors = [
+	"#FF6633",
+	"#FFFF99",
+	"#3366E6",
+	"#999966",
+	"#99FF99",
+	"#B34D4D",
+	"#809900",
+	"#E6B3B3",
+	"#6680B3",
+	"#66991A",
+	"#FF99E6",
+	"#33FFCC",
+	"#4D8000",
+	"#B33300",
+	"#CC80CC",
+	"#66664D",
+	"#991AFF",
+	"#4DB3FF",
+	"#CC9999",
+	"#B3B31A",
+	"#00E680",
+	"#4D8066",
+	"#E6FF80",
+	"#1AFF33",
+	"#999933",
+	"#FF3380",
+];

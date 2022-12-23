@@ -10,7 +10,7 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			<input class="user-text center" id="userText">
+			<input class="user-text center" id="userText" placeholder="Your Name" onkeypress="return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || event.charCode == 32)">
 				<!-- display user text -->
 			</input>
 			<div class="hide" id="output">
